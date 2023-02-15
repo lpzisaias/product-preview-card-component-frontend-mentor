@@ -1,0 +1,139 @@
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --dark-cyan-hover: #1a4031;
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --border-size: .5rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cream);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+img {
+    width: 100%;
+}
+
+.card {
+    background-color: var(--white);
+    margin-bottom: 1rem;
+    border-radius: var(--border-size);
+    max-width: 600px;
+}
+
+.card img {
+    border-radius: var(--border-size) var(--border-size) 0 0;
+
+}
+
+.card .category {
+    letter-spacing: 6px;
+}
+
+.card h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.container p {
+    color: var(--dark-grayish-blue);
+    margin-bottom: 1rem;
+    line-height: 25px;
+
+}
+
+.container .price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container .price .discount {
+    color: var(--dark-cyan);
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+}
+
+.container .price .base {
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+.container .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--dark-cyan);
+    border-style: none;
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.container .button .icon {
+    width: 15px;
+    height: 15px;
+}
+
+.button:hover {
+    background-color: var(--dark-cyan-hover);
+}
+
+.icon {
+    display: inline-block;
+    width: 15px;
+    height: 16px;
+}
+
+@media (min-width: 600px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: var(--border-size) 0 0 var(--border-size);
+        width: 300px;
+    }
+
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
