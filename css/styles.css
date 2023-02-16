@@ -18,7 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--cream);
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
     margin: 1.5rem;
@@ -101,17 +101,11 @@ img {
 
 .container .button .icon {
     width: 15px;
-    height: 15px;
+    height: 16px;
 }
 
 .button:hover {
     background-color: var(--dark-cyan-hover);
-}
-
-.icon {
-    display: inline-block;
-    width: 15px;
-    height: 16px;
 }
 
 @media (min-width: 600px) {
@@ -124,7 +118,14 @@ img {
         height: 100%;
         object-fit: cover;
         border-radius: var(--border-size) 0 0 var(--border-size);
-        width: 300px;
+        /* width: 300px; */
+    }
+
+    .img-container{
+        width: 50%;
+    }
+    .container{
+        width: 50%;
     }
 
 }
